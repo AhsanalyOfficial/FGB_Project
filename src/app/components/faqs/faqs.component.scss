@@ -1,0 +1,76 @@
+.faqs_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: #111111;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 40px;
+  .heading {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../assets/project-title-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f1f1f1;
+    }
+  }
+  .accord_container {
+    // width: 60%;
+    height: auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .accordion_container {
+      background-color: #000000;
+      border-radius: 20px;
+      
+    }
+    .accord_item {
+      background-color: #000000;
+      color: #f1f1f1;
+    }
+    .attendence_header,
+    .ticketing_header {
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: bold;
+      color: #f1f1f1;
+      text-transform: uppercase;
+    }
+    ::ng-deep.accordion-button::after {
+      flex-shrink: 0;
+      width: var(--bs-accordion-btn-icon-width);
+      height: var(--bs-accordion-btn-icon-width);
+      margin-left: auto;
+      content: "\25BC";
+      background-image: none;
+    }
+    ::ng-deep.accordion-flush
+      > .accordion-item
+      > .accordion-header
+      .accordion-button,
+    .accordion-flush
+      > .accordion-item
+      > .accordion-header
+      .accordion-button.collapsed {
+      border-radius: 0;
+      background: #000000;
+      color: white;
+      outline: none;
+    }
+    ::ng-deep.accordion-body {
+      padding: var(--bs-accordion-body-padding-y)
+        var(--bs-accordion-body-padding-x);
+      background: #000000;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,261 @@
+h1,
+ul,
+h2,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar_top {
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding: 0 10px;
+  color: white;
+  height: auto;
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .logo {
+      width: 45px;
+      height: 45px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+    p {
+      font-weight: bold;
+    }
+    select {
+      padding: 0px;
+      height: auto;
+      border: none;
+      outline: none;
+      width: 70px;
+      background-color: black;
+      color: white;
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .notification {
+      border-left: 1px solid #f1f1f1;
+      border-right: 1px solid #f1f1f1;
+      padding: 0 14px 0 10px;
+      .notify {
+        position: relative;
+        span {
+          width: 12px;
+          height: 12px;
+          top: 0px !important;
+          right: -10px !important;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: red;
+          padding: 4px;
+        }
+      }
+    }
+    div {
+      .challenge_icon {
+        width: 20px;
+        height: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .dollar_icon {
+        width: 20px;
+        height: 20px;
+        color: black;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-weight: 600;
+      }
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    select {
+      padding: 0px;
+      height: auto;
+      border: none;
+      outline: none;
+      width: 70px;
+      background-color: black;
+      color: white;
+    }
+  }
+  .mobileMenuIcon {
+    font-size: 35px !important;
+  }
+}
+.menu_selection_name {
+  width: 100%;
+  height: 100px;
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+.navbar {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
+      gap: 44px;
+      li {
+        list-style: none;
+        cursor: pointer;
+        a {
+          color: gray;
+          text-decoration: none;
+          font-size: 15px;
+          text-transform: uppercase;
+          font-weight: bold;
+          padding: 0 10px;
+        }
+        a.active {
+          border-bottom: 2px solid #059fd9;
+          color: #059fd9;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.menu_selection_name {
+  background-image: url("../../../assets/project-title-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    color: white;
+  }
+}
+
+::ng-deep[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar_top{
+    .menu_button_icon{
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+  }
+  .mobile_menu_div {
+    position: relative;
+    transition: 0.5s all;
+    .mobile-menu {
+      background-color: #000000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+      .logo {
+        width: 70px;
+        height: auto;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      select {
+        width: 100%;
+      }
+      p {
+        font-size: 20px;
+      }
+      .challenges,
+      .price,
+      .notification {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 14px;
+        p {
+          font-size: 20px;
+        }
+
+        .bi-trophy-fill,
+        .bi-currency-dollar,
+        .bi-bell-fill {
+          font-size: 20px;
+        }
+      }
+      .price {
+        .bi-currency-dollar {
+          font-size: 20px;
+          background-color: #f1f1f1;
+          color: #000000;
+          border-radius: 40px;
+          padding: 0 4px;
+        }
+      }
+      .notification {
+        span {
+          left: 24px;
+          top: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .navbar_top {
+    .left {
+      gap: 10px !important;
+      p {
+        font-size: 13px;
+      }
+      select {
+        font-size: 13px;
+      }
+    }
+    .right {
+      gap: 10px !important;
+      p {
+        font-size: 13px;
+      }
+      select {
+        font-size: 13px;
+      }
+    }
+  }
+}

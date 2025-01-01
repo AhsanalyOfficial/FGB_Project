@@ -1,0 +1,192 @@
+p,
+h1,
+h2 {
+  margin: 0px;
+  padding: 0px;
+}
+.benefits_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(16, 15, 15);
+  color: #f1f1f1;
+  gap: 20px;
+  padding: 0 0 30px 0;
+  padding-top: 20px;
+  .selection_content {
+    height: auto;
+    padding: 16px 24px;
+    background-color: #00a2e0;
+    color: #f1f1f1;
+    border-radius: 12px;
+    p {
+      font-size: 14px;
+    }
+    .head {
+      font-size: 16px;
+      font-weight: bold;
+      padding-bottom: 10px;
+      span {
+        padding: 0 10px;
+        font-size: 20px;
+      }
+    }
+  }
+  .selected {
+    height: auto;
+    h2 {
+      font-size: 15px;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+    .images {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+      .image {
+        width: 65px;
+        height: 65px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          color: #f1f1f1;
+          filter: grayscale(100%);
+        }
+      }
+    }
+  }
+  .avail_benefits {
+    height: auto;
+    h2 {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 14px;
+    }
+    .benefits_cards {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+      .ben_card {
+        // width: 48%;
+        height: auto;
+        border: 1.5px solid #0b9bef;
+        background-color: #212121;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+        color: #f1f1f1;
+        padding: 14px;
+        border-radius: 20px;
+        .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100px;
+          height: auto;
+          background-color: #0b9bef;
+          border-radius: 14px;
+          padding: 10px 20px;
+          .bi-fuel-pump {
+            font-size: 48px;
+          }
+        }
+        .content {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 4px;
+          font-size: 20px;
+          .learn {
+            color: #01a2e0;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+          }
+
+          .btn {
+            width: 100%;
+            background-color: #01a2e0;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            margin-top: 15px;
+            button {
+              background-color: #01a2e0;
+              width: 100%;
+              border: none;
+              outline: none;
+              color: #f1f1f1;
+              font-weight: bold;
+              font-size: 14px;
+              text-transform: uppercase;
+            }
+            .add {
+              background-color: green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.main_container {
+  background-color: #111111;
+  .cards_container {
+    .carder {
+      background-color: #000000;
+      border: 1.5px solid #0b9bef;
+      .icon {
+        width: 140px;
+        height: 100px;
+        .bi-fuel-pump {
+          font-size: 50px;
+        }
+      }
+      .content {
+        a {
+          text-decoration: none;
+          color: #138bbd;
+        }
+        h2 {
+          color: #f1f1f1;
+          font-size: 22px;
+          font-weight: bold;
+        }
+        p {
+          font-size: 14px;
+          color: gray;
+        }
+        button {
+          text-transform: uppercase;
+          color: white;
+        }
+        .add {
+          background-color: #00a2e0;
+        }
+        .out_of_stock,
+        .coming_soon {
+          background-color: #707070;
+        }
+        .expired {
+          background-color: red;
+        }
+      }
+    }
+  }
+}

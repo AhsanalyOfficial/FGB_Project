@@ -1,0 +1,17 @@
+@use "bootstrap/scss/bootstrap" as *;
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
+h1,
+ul,
+h2,
+p {
+  padding: 0px;
+  margin: 0px;
+}

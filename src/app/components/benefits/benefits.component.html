@@ -1,0 +1,63 @@
+<div class="benefits_container">
+  <div class="selection_content container">
+    <p class="head">You have selected <span>0/4</span> benefits</p>
+    <p>
+      Thank you for enrolling early for the 2025 season. You now have the chance
+      to customize your 2025 Marlins Memberships!
+    </p>
+    <p>Choose your incentive(s) from the list below:</p>
+  </div>
+  <div class="selected container">
+    <h2>SELECTED BENEFITS</h2>
+    <div class="images">
+      <div class="image">
+        <img src="../../../assets/baseball_icon.png" alt="" />
+      </div>
+      <div class="image">
+        <img src="../../../assets/baseball_icon.png" alt="" />
+      </div>
+      <div class="image">
+        <img src="../../../assets/baseball_icon.png" alt="" />
+      </div>
+      <div class="image">
+        <img src="../../../assets/baseball_icon.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="main_container text-white">
+    <div class="container">
+      <div class="cards_container row mx-0">
+        @for (item of benefits; track $index) {
+        <div class="col-lg-6 col-md-12 mb-4 mt-4">
+          <div
+            class="carder d-flex justify-content-start align-items-start gap-3 rounded-5"
+            style="padding: 20px"
+          >
+            <div
+              class="icon bg-white rounded-4 text-dark d-flex justify-content-center align-items-center"
+            >
+              <i class="bi bi-fuel-pump"></i>
+            </div>
+            <div class="content w-100 d-flex flex-column gap-2">
+              <h2>{{ item.title }}</h2>
+              <p>{{ item.expiryDate }}</p>
+              <a href="{{ item.link }}">learn more</a>
+              <button
+                class="btn-danger rounded-5 border-0 pb-1 pt-1 w-100"
+                [ngClass]="{
+                  add: item.status === 'add',
+                  expired: item.status === 'expired',
+                  out_of_stock: item.status === 'out_of_stock',
+                  coming_soon: item.status === 'coming_soon'
+                }"
+              >
+                {{ item.status }}
+              </button>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

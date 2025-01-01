@@ -1,0 +1,86 @@
+<div class="challenges_container d-flex align-items-center">
+  <div class="header">
+    <div class="head container">
+      <div class="heading">
+        <h1>BADGES ACHIEVED (2)</h1>
+        <p class="d-none">View All <span> </span> ></p>
+      </div>
+      <div
+        class="badges d-flex justify-content-center align-items-center gap-3"
+      >
+        <div class="image">
+          <img src="../../../assets/badges.png" class="img-responsive" alt="" />
+        </div>
+        <div class="image">
+          <img src="../../../assets/badges.png" class="img-responsive" alt="" />
+        </div>
+        <div class="image">
+          <img src="../../../assets/badges.png" class="img-responsive" alt="" />
+        </div>
+        <div class="image">
+          <img src="../../../assets/badges.png" class="img-responsive" alt="" />
+        </div>
+        <div class="image">
+          <img src="../../../assets/badges.png" class="img-responsive" alt="" />
+        </div>
+        <p>View All <span> </span> ></p>
+      </div>
+    </div>
+  </div>
+  <div class="cards_container container">
+    <div class="row mx-0">
+      @for (data of challenges; track $index) {
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-auto mb-4">
+          <div class="card-body">
+            <div class="top d-flex align-items-center mb-3">
+              <div class="icon">
+                <img
+                  src="../../../assets/badges.png"
+                  alt="Icon"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="content">
+                <h5 class="card-title">{{ data.title }}</h5>
+                <p class="card-text">{{ data.description }}</p>
+              </div>
+            </div>
+            <div class="middle mb-3">
+              <div class="badges d-flex justify-content-between gap-2">
+                <img
+                  src="../../../assets/badges.png"
+                  alt="Badge"
+                  class="img-fluid"
+                />
+                <img
+                  src="../../../assets/badges.png"
+                  alt="Badge"
+                  class="img-fluid"
+                />
+                <img
+                  src="../../../assets/badges.png"
+                  alt="Badge"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+            <div class="bottom mb-3">
+              <p class="m-0">
+                <strong>Prize:</strong>
+                <span class="ps-1">{{ data.prize }}</span>
+              </p>
+            </div>
+          </div>
+          <div class="overlay_numbering position-absolute">
+            <p class="text-white">
+              <span>{{ data.totalChallenges }}</span
+              >/<span>{{ data.completedChallenges }}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
